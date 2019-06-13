@@ -31,7 +31,9 @@ ext_modules += [ Extension('pyjsbsim.jsbsim_cython',
     include_dirs=[
         '/usr/local/include/JSBSim'
     ],
-    language='c++11'),
+    language='c++',
+    extra_compile_args=["-std=c++11"],
+    extra_link_args=["-std=c++11"]),
 ]
 
 setup(name='PyJSBSim',
